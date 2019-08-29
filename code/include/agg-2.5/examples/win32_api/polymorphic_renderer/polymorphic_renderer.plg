@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: polymorphic_renderer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP6C4E.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "../../../include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/polymorphic_renderer.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\src\agg_bezier_arc.cpp"
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\src\platform\win32\agg_platform_support.cpp"
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\src\agg_trans_affine.cpp"
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\src\agg_vcgen_contour.cpp"
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\src\agg_vcgen_dash.cpp"
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\src\platform\win32\agg_win32_bmp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\agg-2.5\examples\polymorphic_renderer.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP6C4E.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP6C4F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/polymorphic_renderer.pdb" /debug /machine:I386 /out:"Debug/polymorphic_renderer.exe" /pdbtype:sept 
+".\Debug\agg_bezier_arc.obj"
+".\Debug\agg_platform_support.obj"
+".\Debug\agg_trans_affine.obj"
+".\Debug\agg_vcgen_contour.obj"
+".\Debug\agg_vcgen_dash.obj"
+".\Debug\agg_win32_bmp.obj"
+".\Debug\polymorphic_renderer.obj"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP6C4F.tmp"
+<h3>Output Window</h3>
+Compiling...
+agg_bezier_arc.cpp
+agg_platform_support.cpp
+agg_trans_affine.cpp
+agg_vcgen_contour.cpp
+e:\work\gmapx\trunk\gmap2\include\agg-2.5\src\agg_vcgen_contour.cpp(24) : fatal error C1083: Cannot open include file: 'stdafx.h': No such file or directory
+agg_vcgen_dash.cpp
+agg_win32_bmp.cpp
+polymorphic_renderer.cpp
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+polymorphic_renderer.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

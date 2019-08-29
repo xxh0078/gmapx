@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: image_alpha - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSPF2.tmp" with contents
+[
+/nologo /MD /W3 /Gm /GX /ZI /Od /I "../../../include" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "AGG_BMP_NO_ALPHA_BLEND" /FR"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\agg-2.5\src\agg_bezier_arc.cpp"
+"E:\work\agg-2.5\src\agg_bspline.cpp"
+"E:\work\agg-2.5\src\agg_gsv_text.cpp"
+"E:\work\agg-2.5\src\agg_image_filters.cpp"
+"E:\work\agg-2.5\src\platform\win32\agg_platform_support.cpp"
+"E:\work\agg-2.5\src\ctrl\agg_spline_ctrl.cpp"
+"E:\work\agg-2.5\src\agg_sqrt_tables.cpp"
+"E:\work\agg-2.5\src\agg_trans_affine.cpp"
+"E:\work\agg-2.5\src\agg_vcgen_stroke.cpp"
+"E:\work\agg-2.5\src\platform\win32\agg_win32_bmp.cpp"
+"E:\work\agg-2.5\examples\image_alpha.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSPF2.tmp" 
+<h3>Output Window</h3>
+Compiling...
+agg_bezier_arc.cpp
+agg_bspline.cpp
+agg_gsv_text.cpp
+agg_image_filters.cpp
+agg_platform_support.cpp
+agg_spline_ctrl.cpp
+agg_sqrt_tables.cpp
+agg_trans_affine.cpp
+agg_vcgen_stroke.cpp
+agg_win32_bmp.cpp
+image_alpha.cpp
+Generating Code...
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSPF3.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/image_alpha.pdb" /debug /machine:I386 /out:"Debug/image_alpha.exe" /pdbtype:sept 
+".\Debug\agg_bezier_arc.obj"
+".\Debug\agg_bspline.obj"
+".\Debug\agg_gsv_text.obj"
+".\Debug\agg_image_filters.obj"
+".\Debug\agg_platform_support.obj"
+".\Debug\agg_spline_ctrl.obj"
+".\Debug\agg_sqrt_tables.obj"
+".\Debug\agg_trans_affine.obj"
+".\Debug\agg_vcgen_stroke.obj"
+".\Debug\agg_win32_bmp.obj"
+".\Debug\image_alpha.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSPF3.tmp"
+<h3>Output Window</h3>
+Linking...
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSPF4.tmp" with contents
+[
+/nologo /o"Debug/image_alpha.bsc" 
+".\Debug\agg_bezier_arc.sbr"
+".\Debug\agg_bspline.sbr"
+".\Debug\agg_gsv_text.sbr"
+".\Debug\agg_image_filters.sbr"
+".\Debug\agg_platform_support.sbr"
+".\Debug\agg_spline_ctrl.sbr"
+".\Debug\agg_sqrt_tables.sbr"
+".\Debug\agg_trans_affine.sbr"
+".\Debug\agg_vcgen_stroke.sbr"
+".\Debug\agg_win32_bmp.sbr"
+".\Debug\image_alpha.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSPF4.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+image_alpha.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

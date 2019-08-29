@@ -1,0 +1,27 @@
+// VOSIniFile.cpp: implementation of the CVOSIniFile class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+//#include "gmap.h"
+#include "VOSIniFile.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CVOSIniFile::CVOSIniFile()
+{
+
+}
+
+CVOSIniFile::~CVOSIniFile()
+{
+
+}

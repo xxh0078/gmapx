@@ -1,0 +1,190 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: demoDll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEAD5.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\cximage" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "VATI_EXTENSIONS" /D "_CRT_SECURE_NO_DEPRECATE" /D _WIN32_IE=0x0400 /Fr"DebugDll/" /Fo"DebugDll/" /Fd"DebugDll/" /FD /c 
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\BCMenu.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\ChildFrm.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\demo.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\demoDoc.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\demoView.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgCapture.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgColorize.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgCombine.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgCustomFilter.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgDataExt.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgDecBpp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgDither.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgExpand.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgFFT.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgFloodFill.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgGamma.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgHisto.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgIncBpp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgJpeg.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgMix.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgOpacity.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgOptions.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgPalette.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgRepair.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgResample.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgRotate.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgShadow.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgSkew.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgText.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgThreshold.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\DlgURL.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\logomdi.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\MainFrm.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\Quantize.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\TwainCpp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\demo\xTargetButton.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEAD5.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEAE5.tmp" with contents
+[
+wininet.lib ../cximage/CxImageDLL/Debug/cximagecrtd.lib /nologo /subsystem:windows /incremental:yes /pdb:"DebugDll/demoddll.pdb" /debug /machine:I386 /out:"../bin/demoddll.exe" 
+.\DebugDll\BCMenu.obj
+.\DebugDll\ChildFrm.obj
+.\DebugDll\demo.obj
+.\DebugDll\demoDoc.obj
+.\DebugDll\demoView.obj
+.\DebugDll\DlgCapture.obj
+.\DebugDll\DlgColorize.obj
+.\DebugDll\DlgCombine.obj
+.\DebugDll\DlgCustomFilter.obj
+.\DebugDll\DlgDataExt.obj
+.\DebugDll\DlgDecBpp.obj
+.\DebugDll\DlgDither.obj
+.\DebugDll\DlgExpand.obj
+.\DebugDll\DlgFFT.obj
+.\DebugDll\DlgFloodFill.obj
+.\DebugDll\DlgGamma.obj
+.\DebugDll\DlgHisto.obj
+.\DebugDll\DlgIncBpp.obj
+.\DebugDll\DlgJpeg.obj
+.\DebugDll\DlgMix.obj
+.\DebugDll\DlgOpacity.obj
+.\DebugDll\DlgOptions.obj
+.\DebugDll\DlgPalette.obj
+.\DebugDll\DlgRepair.obj
+.\DebugDll\DlgResample.obj
+.\DebugDll\DlgRotate.obj
+.\DebugDll\DlgShadow.obj
+.\DebugDll\DlgSkew.obj
+.\DebugDll\DlgText.obj
+.\DebugDll\DlgThreshold.obj
+.\DebugDll\DlgURL.obj
+.\DebugDll\logomdi.obj
+.\DebugDll\MainFrm.obj
+.\DebugDll\Quantize.obj
+.\DebugDll\StdAfx.obj
+.\DebugDll\TwainCpp.obj
+.\DebugDll\xTargetButton.obj
+.\DebugDll\demo.res
+\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\CxImageDLL\Debug\cximagecrtd.lib
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEAE5.tmp"
+<h3>Output Window</h3>
+Compiling...
+BCMenu.cpp
+ChildFrm.cpp
+demo.cpp
+demoDoc.cpp
+demoView.cpp
+DlgCapture.cpp
+DlgColorize.cpp
+DlgCombine.cpp
+DlgCustomFilter.cpp
+DlgDataExt.cpp
+DlgDecBpp.cpp
+DlgDither.cpp
+Generating Code...
+Compiling...
+DlgExpand.cpp
+DlgFFT.cpp
+DlgFloodFill.cpp
+DlgGamma.cpp
+DlgHisto.cpp
+DlgIncBpp.cpp
+DlgJpeg.cpp
+DlgMix.cpp
+DlgOpacity.cpp
+DlgOptions.cpp
+DlgPalette.cpp
+DlgRepair.cpp
+Generating Code...
+Compiling...
+DlgResample.cpp
+DlgRotate.cpp
+DlgShadow.cpp
+DlgSkew.cpp
+DlgText.cpp
+DlgThreshold.cpp
+DlgURL.cpp
+logomdi.cpp
+MainFrm.cpp
+Quantize.cpp
+TwainCpp.cpp
+xTargetButton.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1168: cannot open ../bin/demoddll.exe for writing
+Error executing link.exe.
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP60FF.tmp" with contents
+[
+/nologo /o"DebugDll/demoDLL.bsc" 
+.\DebugDll\StdAfx.sbr
+.\DebugDll\BCMenu.sbr
+.\DebugDll\ChildFrm.sbr
+.\DebugDll\demo.sbr
+.\DebugDll\demoDoc.sbr
+.\DebugDll\demoView.sbr
+.\DebugDll\DlgCapture.sbr
+.\DebugDll\DlgColorize.sbr
+.\DebugDll\DlgCombine.sbr
+.\DebugDll\DlgCustomFilter.sbr
+.\DebugDll\DlgDataExt.sbr
+.\DebugDll\DlgDecBpp.sbr
+.\DebugDll\DlgDither.sbr
+.\DebugDll\DlgExpand.sbr
+.\DebugDll\DlgFFT.sbr
+.\DebugDll\DlgFloodFill.sbr
+.\DebugDll\DlgGamma.sbr
+.\DebugDll\DlgHisto.sbr
+.\DebugDll\DlgIncBpp.sbr
+.\DebugDll\DlgJpeg.sbr
+.\DebugDll\DlgMix.sbr
+.\DebugDll\DlgOpacity.sbr
+.\DebugDll\DlgOptions.sbr
+.\DebugDll\DlgPalette.sbr
+.\DebugDll\DlgRepair.sbr
+.\DebugDll\DlgResample.sbr
+.\DebugDll\DlgRotate.sbr
+.\DebugDll\DlgShadow.sbr
+.\DebugDll\DlgSkew.sbr
+.\DebugDll\DlgText.sbr
+.\DebugDll\DlgThreshold.sbr
+.\DebugDll\DlgURL.sbr
+.\DebugDll\logomdi.sbr
+.\DebugDll\MainFrm.sbr
+.\DebugDll\Quantize.sbr
+.\DebugDll\TwainCpp.sbr
+.\DebugDll\xTargetButton.sbr]
+Creating command line "bscmake.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP60FF.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+demoddll.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

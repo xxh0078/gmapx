@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: image_fltr_graph - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP156.tmp" with contents
+[
+/nologo /MD /W3 /Gm /GX /ZI /Od /I "../../../include" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "AGG_BMP_NO_ALPHA_BLEND" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\work\agg-2.5\agg-2.5\src\agg_bezier_arc.cpp"
+"D:\work\agg-2.5\agg-2.5\src\agg_bspline.cpp"
+"D:\work\agg-2.5\agg-2.5\src\ctrl\agg_cbox_ctrl.cpp"
+"D:\work\agg-2.5\agg-2.5\src\agg_gsv_text.cpp"
+"D:\work\agg-2.5\agg-2.5\src\agg_image_filters.cpp"
+"D:\work\agg-2.5\agg-2.5\src\platform\win32\agg_platform_support.cpp"
+"D:\work\agg-2.5\agg-2.5\src\ctrl\agg_rbox_ctrl.cpp"
+"D:\work\agg-2.5\agg-2.5\src\ctrl\agg_slider_ctrl.cpp"
+"D:\work\agg-2.5\agg-2.5\src\ctrl\agg_spline_ctrl.cpp"
+"D:\work\agg-2.5\agg-2.5\src\agg_sqrt_tables.cpp"
+"D:\work\agg-2.5\agg-2.5\src\agg_trans_affine.cpp"
+"D:\work\agg-2.5\agg-2.5\src\agg_vcgen_stroke.cpp"
+"D:\work\agg-2.5\agg-2.5\src\platform\win32\agg_win32_bmp.cpp"
+"D:\work\agg-2.5\agg-2.5\examples\image_fltr_graph.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP156.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP157.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/image_fltr_graph.pdb" /debug /machine:I386 /out:"Debug/image_fltr_graph.exe" /pdbtype:sept 
+".\Debug\agg_bezier_arc.obj"
+".\Debug\agg_bspline.obj"
+".\Debug\agg_cbox_ctrl.obj"
+".\Debug\agg_gsv_text.obj"
+".\Debug\agg_image_filters.obj"
+".\Debug\agg_platform_support.obj"
+".\Debug\agg_rbox_ctrl.obj"
+".\Debug\agg_slider_ctrl.obj"
+".\Debug\agg_spline_ctrl.obj"
+".\Debug\agg_sqrt_tables.obj"
+".\Debug\agg_trans_affine.obj"
+".\Debug\agg_vcgen_stroke.obj"
+".\Debug\agg_win32_bmp.obj"
+".\Debug\image_fltr_graph.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP157.tmp"
+<h3>Output Window</h3>
+Compiling...
+agg_bezier_arc.cpp
+agg_bspline.cpp
+agg_cbox_ctrl.cpp
+agg_gsv_text.cpp
+agg_image_filters.cpp
+agg_platform_support.cpp
+agg_rbox_ctrl.cpp
+agg_slider_ctrl.cpp
+agg_spline_ctrl.cpp
+agg_sqrt_tables.cpp
+agg_trans_affine.cpp
+agg_vcgen_stroke.cpp
+agg_win32_bmp.cpp
+image_fltr_graph.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+image_fltr_graph.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

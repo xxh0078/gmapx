@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{E8DF3964-6D30-991B-9104-3BF1AABF337A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>.\ReleaseU\</OutDir>
+    <IntDir>.\ReleaseU\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>.\DebugU\</OutDir>
+    <IntDir>.\DebugU\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WINDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\ReleaseU\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\ReleaseU\gmapx.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\ReleaseU\</ObjectFileName>
+      <ProgramDataBaseFileName>.\ReleaseU\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\ReleaseU\gmapx.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\ReleaseU\gmapx.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\ReleaseU\gmapx.ocx</OutputFile>
+      <ImportLibrary>.\ReleaseU\gmapx.lib</ImportLibrary>
+      <ModuleDefinitionFile>.\gmapx.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>regsvr32 /s /c "$(TargetPath)" 
+echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
+      <Message>Registering ActiveX Control...</Message>
+      <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WINDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\gmapx.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\gmapx.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\gmapx.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>../bin/gmapx.ocx</OutputFile>
+      <ImportLibrary>.\Debug\gmapx.lib</ImportLibrary>
+      <ModuleDefinitionFile>.\gmapx.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>regsvr32 /s /c "$(TargetPath)" 
+echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
+      <Message>Registering ActiveX Control...</Message>
+      <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WINDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\DebugU\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\DebugU\gmapx.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\DebugU\</ObjectFileName>
+      <ProgramDataBaseFileName>.\DebugU\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\DebugU\gmapx.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\DebugU\gmapx.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\DebugU\gmapx.ocx</OutputFile>
+      <ImportLibrary>.\DebugU\gmapx.lib</ImportLibrary>
+      <ModuleDefinitionFile>.\gmapx.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>regsvr32 /s /c "$(TargetPath)" 
+echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
+      <Message>Registering ActiveX Control...</Message>
+      <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WINDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\gmapx.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\gmapx.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\gmapx.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>../bin/gmapx.ocx</OutputFile>
+      <ImportLibrary>.\Release\gmapx.lib</ImportLibrary>
+      <ModuleDefinitionFile>.\gmapx.def</ModuleDefinitionFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>regsvr32 /s /c "$(TargetPath)" 
+echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
+      <Message>Registering ActiveX Control...</Message>
+      <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DlgMapSymbol.cpp" />
+    <ClCompile Include="DlgProperty.cpp" />
+    <ClCompile Include="gmapx.cpp" />
+    <ClCompile Include="GmapxCtl.cpp" />
+    <ClCompile Include="GmapxPpg.cpp" />
+    <ClCompile Include="InputBox.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\include\agg-2.5\src\agg_vcgen_contour.cpp" />
+    <ClCompile Include="..\include\agg-2.5\src\agg_vcgen_markers_term.cpp" />
+    <ClCompile Include="..\include\agg-2.5\src\agg_vcgen_stroke.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\bspng.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\MD5.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\PngImage.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\Project.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\VOSFile.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\VOSImage.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\VosTime.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\VOSURL.cpp" />
+    <ClCompile Include="..\MapEngine\VOSBase\VOSUtil.cpp" />
+    <ClCompile Include="..\MapEngine\MapDisp\MapBlockUnit.cpp" />
+    <ClCompile Include="..\MapEngine\MapDisp\MapData.cpp" />
+    <ClCompile Include="..\MapEngine\MapDisp\MapDataDown.cpp" />
+    <ClCompile Include="..\MapEngine\MapDisp\MapDisp.cpp" />
+    <ClCompile Include="..\MapEngine\MapDisp\MapDispLayer.cpp" />
+    <ClCompile Include="..\MapEngine\MapBase\FourTree.cpp" />
+    <ClCompile Include="..\MapEngine\MapBase\MapBase.cpp" />
+    <ClCompile Include="..\MapEngine\MapBase\MapFourTree.cpp" />
+    <ClCompile Include="..\MapEngine\MapBase\MapUtil.cpp" />
+    <ClCompile Include="..\MapEngine\MapBase\SqliteDB.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\BackLayer.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapAround.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapLayer.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapLeyerMan.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapLine.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoi.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoiInfo.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoint.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoiRes.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapPolygon.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapRule.cpp" />
+    <ClCompile Include="..\MapEngine\MapLayer\MapText.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapButton.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapComBox.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapCtrl.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapCtrol.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapDirRule.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapEdit.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapSymbolEdit.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolAround.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolLine.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolPolygon.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolRect.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MapWnd.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\MarkMapPoint.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\SlideButton.cpp" />
+    <ClCompile Include="..\MapEngine\MapCtrol\UrlLink.cpp" />
+    <ClCompile Include="..\MapEngine\UserInfo\UserInfo.cpp" />
+    <ClCompile Include="..\MapEngine\UserInfo\UserMapPOI.cpp" />
+    <ClCompile Include="..\MapEngine\MapActive\GetHWID.cpp" />
+    <ClCompile Include="..\MapEngine\MapActive\MapActive.cpp" />
+    <ClCompile Include="..\MapEngine\MapOffSet\MapOffSet.cpp" />
+    <ClCompile Include="..\MapEngine\mif\MifMan.cpp" />
+    <ClCompile Include="..\MapEngine\MapEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gmapx.def" />
+    <CustomBuild Include="gmapx.ico" />
+    <CustomBuild Include="GmapxCtl.bmp" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="gmapx.odl">
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Win32</TargetEnvironment>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Win32</TargetEnvironment>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gmapx.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DlgMapSymbol.h" />
+    <ClInclude Include="DlgProperty.h" />
+    <ClInclude Include="gmapx.h" />
+    <ClInclude Include="GmapxCtl.h" />
+    <ClInclude Include="GmapxPpg.h" />
+    <ClInclude Include="InputBox.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\bspng.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\MD5.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\PngImage.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\Project.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VOSBase.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VOSDefine.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VOSFile.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VOSImage.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VosTime.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VOSURL.h" />
+    <ClInclude Include="..\MapEngine\VOSBase\VOSUtil.h" />
+    <ClInclude Include="..\MapEngine\MapDisp\MapBlockUnit.h" />
+    <ClInclude Include="..\MapEngine\MapDisp\MapData.h" />
+    <ClInclude Include="..\MapEngine\MapDisp\MapDataDown.h" />
+    <ClInclude Include="..\MapEngine\MapDisp\MapDisp.h" />
+    <ClInclude Include="..\MapEngine\MapDisp\MapDispLayer.h" />
+    <ClInclude Include="..\MapEngine\MapBase\FourTree.h" />
+    <ClInclude Include="..\MapEngine\MapBase\MapBase.h" />
+    <ClInclude Include="..\MapEngine\MapBase\MapDefine.h" />
+    <ClInclude Include="..\MapEngine\MapBase\MapFourTree.h" />
+    <ClInclude Include="..\MapEngine\MapBase\MapUtil.h" />
+    <ClInclude Include="..\MapEngine\MapBase\SqliteDB.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\BackLayer.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapAround.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapLayer.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapLeyerMan.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapLine.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoi.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoiInfo.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoint.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoiRes.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapPolygon.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapRule.h" />
+    <ClInclude Include="..\MapEngine\MapLayer\MapText.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapButton.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapComBox.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapCtrl.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapCtrol.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapDirRule.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapEdit.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapSymbolEdit.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolAround.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolLine.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolPolygon.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolRect.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MapWnd.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\MarkMapPoint.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\SlideButton.h" />
+    <ClInclude Include="..\MapEngine\MapCtrol\UrlLink.h" />
+    <ClInclude Include="..\MapEngine\UserInfo\UserInfo.h" />
+    <ClInclude Include="..\MapEngine\UserInfo\UserMapPOI.h" />
+    <ClInclude Include="..\MapEngine\MapOffSet\MapOffSet.h" />
+    <ClInclude Include="..\MapEngine\mif\mifdefine.h" />
+    <ClInclude Include="..\MapEngine\mif\MifMan.h" />
+    <ClInclude Include="..\MapEngine\MapEngine.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: testmymap - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/testmymap.res" /d "_DEBUG" /d "_AFXDLL" "E:\work\gmapx1\gmapx\code\testmymap\testmymap.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPC8F9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/testmymap.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx1\gmapx\code\testmymap\DlgMoveMap.cpp"
+"E:\work\gmapx1\gmapx\code\testmymap\gmapx.cpp"
+"E:\work\gmapx1\gmapx\code\testmymap\testmymap.cpp"
+"E:\work\gmapx1\gmapx\code\testmymap\testmymapDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPC8F9.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPC8FA.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/testmymap.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx1\gmapx\code\testmymap\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPC8FA.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPC8FB.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/testmymap.pdb" /debug /machine:I386 /out:"../bin/testmymap.exe" /pdbtype:sept 
+.\Debug\DlgMoveMap.obj
+.\Debug\gmapx.obj
+.\Debug\StdAfx.obj
+.\Debug\testmymap.obj
+.\Debug\testmymapDlg.obj
+.\Debug\testmymap.res
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPC8FB.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+DlgMoveMap.cpp
+gmapx.cpp
+testmymap.cpp
+testmymapDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+testmymap.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

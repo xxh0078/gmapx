@@ -1,0 +1,27 @@
+// MapPOIEdit.cpp: implementation of the CMapPOIEdit class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+//#include "gmapx.h"
+#include "MapPOIEdit.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CMapPOIEdit::CMapPOIEdit()
+{
+
+}
+
+CMapPOIEdit::~CMapPOIEdit()
+{
+
+}

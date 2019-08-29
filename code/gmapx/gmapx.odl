@@ -1,0 +1,144 @@
+// gmapx.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (gmapx.tlb) that will become a resource in
+// gmapx.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(63D13F3A-EABC-48B1-8B9E-741634736D96), version(1.0),
+  helpfile("gmapx.hlp"),
+  helpstring("gmapx ActiveX Control module"),
+  control ]
+library GMAPXLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CGmapxCtrl
+
+	[ uuid(E70B546F-7024-4582-912E-ADA3B989DA6A),
+	  helpstring("Dispatch interface for Gmapx Control"), hidden ]
+	dispinterface _DGmapx
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CGmapxCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CGmapxCtrl)
+			[id(1)] void SetMapURL(BSTR mapurl);
+			[id(2)] void SetMapLocPath(BSTR mappath);
+			[id(3)] void MapZoomIn();
+			[id(4)] void MapZoomOut();
+			[id(5)] long GetMapScale();
+			[id(6)] void SetMapScale(long scale);
+			[id(7)] void MoveMap(double longitude, double latitude);
+			[id(8)] void ShowMap(double longitude, double latitude, long scale);
+			[id(9)] long CreateICO(BSTR path);
+			[id(10)] boolean CreateMapPoint(long pid, double longitude, double lanitude, BSTR name, BSTR text, long icoid);
+			[id(11)] long SetMapPoint(long pid, double lonitude, double lanitude);
+			[id(12)] long SetMapPointName(long pid, BSTR name);
+			[id(13)] long SetMapPointText(long pid, double longitude, double lanitude, BSTR text);
+			[id(14)] long SetMapPointICO(long pid, long icoid);
+			[id(15)] long DeleteMapPoint(long pid);
+			[id(16)] long CreateMapLine(long lid);
+			[id(17)] long DeleteLine(long lid);
+			[id(18)] long AddMapLinePoint(long lid, double longitude, double lanitude);
+			[id(19)] long SetMapLineName(long lid, BSTR name);
+			[id(20)] long SetMapLineColor(long lid, long colorbgr);
+			[id(21)] long SetMapLineWidth(long lid, long width);
+			[id(22)] long CreateMapAround(long rid, double longitude, double lanitide, long radius, long alpha);
+			[id(23)] long DeleteMapAround(long rid);
+			[id(24)] long CreateMapText(long tid, double longitude, double lanitude, BSTR text, long size, long colorbgr);
+			[id(25)] long DeleteMapText(long tid);
+			[id(26)] void Invalidate();
+			[id(27)] void RemoveAllLayer();
+			[id(28)] long SetMapTextFont(long size, long width, long escapement, long orientation, long weight, long Italic, long underline, long strikeOut, BSTR fontname);
+			[id(29)] boolean IsInMapBound(double longitude, double lanigude);
+			[id(30)] boolean IsMapPointInMapCreen(double longitude, double lanitude);
+			[id(31)] long CreateMapPolygon(long pid);
+			[id(32)] long DeletePolygon(long pid);
+			[id(33)] long AddMapPolygonPoint(long pid, double longitude, double lanitude);
+			[id(34)] double GetMapCenterX();
+			[id(35)] double GetMapCenterY();
+			[id(36)] void MoveMapBound(double long1, double lan1, double long2, double lan2);
+			[id(37)] long SetMapTools(long type);
+			[id(38)] void ClearMapTools();
+			[id(39)] long RegisterKey(BSTR userkey);
+			[id(40)] BSTR GetMapBound();
+			[id(41)] BSTR GetMapOffSet(double lon, double lan);
+			[id(42)] void SetMapLevelBount(long minlevel, long maxlevel);
+			[id(43)] void SetMapScaleBound(long scalemin, long scalemax);
+			[id(44)] long OpenAddMapLayer(BSTR path);
+			[id(45)] void CloseAddMapLayer();
+			[id(46)] void DeleteAllMapPoint();
+			[id(47)] boolean IsInMapToolsPolygon(double lon, double lan);
+			[id(48)] long SaveMapPoint(double lon, double lan, BSTR name, BSTR text, long icoid);
+			[id(49)] long SaveMapLine(BSTR name, BSTR mappoints, long width, long colorbgr);
+			[id(50)] long OpenMapEdit(long type, long id, boolean bedit);
+			[id(51)] long SetMapPolygonName(long pid, BSTR name);
+			[id(52)] long SetMapPolygonColor(long pid, long colorbgr);
+			[id(53)] void SetMapAroundName(long rid, BSTR name);
+			[id(54)] long SetMapAroundColor(long rid, long colorbgr);
+			[id(55)] void SetOnlineMap(long lMapType);
+			[id(56)] long SaveMapText(double lon, double lan, BSTR strText, long fontsize, long bgrcolor);
+			[id(57)] long SetMapToolVisible(long lType, long lVisible);
+			[id(58)] long SetMarkFile(BSTR strFileName);
+			[id(59)] BSTR GetScreenXY(double dMapX, double dMapY);
+			[id(60)] long SetMapLineVisible(long rid, long lVisible);
+			[id(61)] long SetMapPointAngle(long pid, long lAngle);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CGmapxCtrl
+
+	[ uuid(F2FDDFB3-5A4B-46B9-A4E0-2D1C217FFFDD),
+	  helpstring("Event interface for Gmapx Control") ]
+	dispinterface _DGmapxEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CGmapxCtrl)
+			[id(1)] void OnMapPointClick(long pid);
+			[id(2)] void OnDrawLine(long count, double lon, double lan);
+			[id(3)] void OnDrawPolygon(long count, double lon, double lan);
+			[id(4)] void OnDrawLineEnd(long count);
+			[id(5)] void OnDrawPolygonEnd(long count);
+			[id(6)] void OnMapToolsLine(long count, BSTR lons, BSTR lans);
+			[id(7)] void OnMapToolsPolygon(long count, BSTR lons, BSTR lans);
+			[id(8)] void OnLoadEnd();
+			[id(9)] void OnMapTollsRect(double mleft, double mtop, double mright, double mbottom);
+			[id(10)] void OnGetMapBound(double lanmin, double lanmax, double lonmin, double lonmax);
+			[id(11)] void OnMouseMap(double lon, double lan);
+			[id(12)] void OnMapPointDbClick(long pid, double lon, double lan);
+			[id(13)] void OnMapToolsDistance(double lon1, double lan1, double lon2, double lan2, double distance, double direction);
+			[id(14)] void OnMessage(long message, long param1, long param2, BSTR param3);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CGmapxCtrl
+
+	[ uuid(0AD6CBF6-E7E0-466F-8AA3-10E59F2CBA0C),
+	  helpstring("Gmapx Control"), control ]
+	coclass Gmapx
+	{
+		[default] dispinterface _DGmapx;
+		[default, source] dispinterface _DGmapxEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

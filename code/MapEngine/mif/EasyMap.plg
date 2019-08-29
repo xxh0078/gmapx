@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EasyMap - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/EasyMap.res" /d "_DEBUG" /d "_AFXDLL" "E:\work\gmapx\trunk\gmap2\MapEngine\mif\EasyMap.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5C24.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/EasyMap.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\DlgMapLegend.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\DlgMapSingle.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\DlgMapUnique.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\DlgPtSymbolSet.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\EasyMap.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\EasyMapDoc.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\EasyMapView.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\JMComboBox.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\JMCOOLMENU.CPP"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\JMToolBar.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\JMTreeCtrl.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\LayersCtrlView.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\LengendCtrl.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MainFrm.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapField.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapFields.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapLayer.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapLayers.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapLine.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapParts.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapPoint.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapPoints.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapPolygon.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapRecordSet.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapRectangle.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapRender.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapTableDesc.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\MapTip.cpp"
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\shpFile.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5C24.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5C25.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/EasyMap.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx\trunk\gmap2\MapEngine\mif\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5C25.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5C26.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/EasyMap.pdb" /debug /machine:I386 /out:"Debug/EasyMap.exe" /pdbtype:sept 
+.\Debug\DlgMapLegend.obj
+.\Debug\DlgMapSingle.obj
+.\Debug\DlgMapUnique.obj
+.\Debug\DlgPtSymbolSet.obj
+.\Debug\EasyMap.obj
+.\Debug\EasyMapDoc.obj
+.\Debug\EasyMapView.obj
+.\Debug\JMComboBox.obj
+.\Debug\JMCOOLMENU.OBJ
+.\Debug\JMToolBar.obj
+.\Debug\JMTreeCtrl.obj
+.\Debug\LayersCtrlView.obj
+.\Debug\LengendCtrl.obj
+.\Debug\MainFrm.obj
+.\Debug\MapField.obj
+.\Debug\MapFields.obj
+.\Debug\MapLayer.obj
+.\Debug\MapLayers.obj
+.\Debug\MapLine.obj
+.\Debug\MapParts.obj
+.\Debug\MapPoint.obj
+.\Debug\MapPoints.obj
+.\Debug\MapPolygon.obj
+.\Debug\MapRecordSet.obj
+.\Debug\MapRectangle.obj
+.\Debug\MapRender.obj
+.\Debug\MapTableDesc.obj
+.\Debug\MapTip.obj
+.\Debug\shpFile.obj
+.\Debug\StdAfx.obj
+.\Debug\EasyMap.res
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5C26.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+E:\work\gmapx\trunk\gmap2\MapEngine\mif\EasyMap.rc(538) : fatal error RC1015: cannot open include file 'res\EasyMap.rc2'.
+Error executing rc.exe.
+
+
+
+<h3>Results</h3>
+EasyMap.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9b8221b1-d619-4dee-8771-ae6de82ab6ec}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a73c9e45-1f9e-46d1-9df3-4a9706be011d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{926cbbcf-7df7-4889-985c-7284f53b1348}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="MapEngine">
+      <UniqueIdentifier>{a006e8fe-fb1b-4338-807c-64e3daa579dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\VOSBase">
+      <UniqueIdentifier>{5c39c18c-2be0-4471-a889-880c9b9a2621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MapDisp">
+      <UniqueIdentifier>{52850166-9422-4a8e-905a-45018920d80a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MapBase">
+      <UniqueIdentifier>{5e223ac7-26f9-4c70-ad25-11fc08e86e22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MapLayer">
+      <UniqueIdentifier>{59f41d3f-8aa2-40de-9b96-e64bdee2b185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MapCtrol">
+      <UniqueIdentifier>{7f9b0dd6-26c2-4619-86dc-3660da8b8cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\UserInfo">
+      <UniqueIdentifier>{415761c8-b4fa-4f83-b2b7-ebea68791393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MapActive">
+      <UniqueIdentifier>{32e58321-a677-40bd-bf6d-a2e3de5cc12c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MapOffSet">
+      <UniqueIdentifier>{41bde6d6-494b-42a6-8039-047d4d070f04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapEngine\MIF">
+      <UniqueIdentifier>{4d2c2656-4c82-4ac7-8b7e-94b7fbd2e8ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DlgMapSymbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgProperty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gmapx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GmapxCtl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GmapxPpg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\agg-2.5\src\agg_vcgen_contour.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\agg-2.5\src\agg_vcgen_markers_term.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\agg-2.5\src\agg_vcgen_stroke.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\bspng.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\MD5.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\PngImage.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\Project.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\VOSFile.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\VOSImage.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\VosTime.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\VOSURL.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\VOSBase\VOSUtil.cpp">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapDisp\MapBlockUnit.cpp">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapDisp\MapData.cpp">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapDisp\MapDataDown.cpp">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapDisp\MapDisp.cpp">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapDisp\MapDispLayer.cpp">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapBase\FourTree.cpp">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapBase\MapBase.cpp">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapBase\MapFourTree.cpp">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapBase\MapUtil.cpp">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapBase\SqliteDB.cpp">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\BackLayer.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapAround.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapLayer.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapLeyerMan.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapLine.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoi.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoiInfo.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoint.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapPoiRes.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapPolygon.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapRule.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapLayer\MapText.cpp">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapButton.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapComBox.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapCtrl.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapCtrol.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapDirRule.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapEdit.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapSymbolEdit.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolAround.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolLine.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolPolygon.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapToolRect.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MapWnd.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\MarkMapPoint.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\SlideButton.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapCtrol\UrlLink.cpp">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\UserInfo\UserInfo.cpp">
+      <Filter>MapEngine\UserInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\UserInfo\UserMapPOI.cpp">
+      <Filter>MapEngine\UserInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapActive\GetHWID.cpp">
+      <Filter>MapEngine\MapActive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapActive\MapActive.cpp">
+      <Filter>MapEngine\MapActive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapOffSet\MapOffSet.cpp">
+      <Filter>MapEngine\MapOffSet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\mif\MifMan.cpp">
+      <Filter>MapEngine\MIF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MapEngine\MapEngine.cpp">
+      <Filter>MapEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="gmapx.odl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gmapx.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DlgMapSymbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gmapx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GmapxCtl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GmapxPpg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\bspng.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\MD5.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\PngImage.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\Project.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VOSBase.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VOSDefine.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VOSFile.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VOSImage.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VosTime.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VOSURL.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\VOSBase\VOSUtil.h">
+      <Filter>MapEngine\VOSBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapDisp\MapBlockUnit.h">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapDisp\MapData.h">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapDisp\MapDataDown.h">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapDisp\MapDisp.h">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapDisp\MapDispLayer.h">
+      <Filter>MapEngine\MapDisp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapBase\FourTree.h">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapBase\MapBase.h">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapBase\MapDefine.h">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapBase\MapFourTree.h">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapBase\MapUtil.h">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapBase\SqliteDB.h">
+      <Filter>MapEngine\MapBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\BackLayer.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapAround.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapLayer.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapLeyerMan.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapLine.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoi.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoiInfo.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoint.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapPoiRes.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapPolygon.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapRule.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapLayer\MapText.h">
+      <Filter>MapEngine\MapLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapButton.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapComBox.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapCtrl.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapCtrol.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapDirRule.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapEdit.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapSymbolEdit.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolAround.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolLine.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolPolygon.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapToolRect.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MapWnd.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\MarkMapPoint.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\SlideButton.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapCtrol\UrlLink.h">
+      <Filter>MapEngine\MapCtrol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\UserInfo\UserInfo.h">
+      <Filter>MapEngine\UserInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\UserInfo\UserMapPOI.h">
+      <Filter>MapEngine\UserInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapOffSet\MapOffSet.h">
+      <Filter>MapEngine\MapOffSet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\mif\mifdefine.h">
+      <Filter>MapEngine\MIF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\mif\MifMan.h">
+      <Filter>MapEngine\MIF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MapEngine\MapEngine.h">
+      <Filter>MapEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gmapx.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gmapx.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GmapxCtl.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

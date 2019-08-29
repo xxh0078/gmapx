@@ -1,0 +1,565 @@
+#include "StdAfx.h"
+#include "MapCtrl.h"
+#include "../MapEngine.h"
+//extern CMapEngine* m_pMapEngine;
+//#include "../gmapx/GmapxCtl.h"
+//CDlgAddSymbol
+
+#define BTN_MAP_LEFT		0x00000100
+#define BTN_MAP_RIGHT		0x00000101
+#define BTN_MAP_UP			0x00000102
+#define BTN_MAP_DOWN		0x00000103
+#define BTN_MAP_ZOOMIN		0x00000104
+#define BTN_MAP_ZOOMOUT		0x00000105
+#define BTN_MAP_SLIDE		0x00000106
+
+#define BTN_MAP_RULE		0x00000107
+#define BTN_MAP_RECT		0x00000108
+#define BTN_MAP_LINE		0x00000109
+#define BTN_MAP_PLOY		0x0000010A
+#define BTN_MAP_CLEAN		0x0000010B
+#define BTN_MAP_SAT			0x0000010C
+
+string strTextMouseMove = "请双击完成！";
+
+CMapCtrl::CMapCtrl(void)
+{
+	m_pMapDisp = NULL;
+	m_pMapLayer = NULL;
+	m_left = 0;
+	m_top = 0;
+	m_flagMove = false;
+	m_iFlagTools = 0;
+	m_lLineIDRule = 0;
+//	m_pMapLine = NULL;
+//	m_pMapPolygon = NULL;
+//	m_bFlagSat = false;
+	m_minLevel = 1;
+	m_maxLevel = 18;
+//	this->m_bShowMapToolsBar = false;
+	m_pButtonCurr = NULL;
+//	m_bMapSat = false;
+//	m_pMapRule = NULL;
+	m_bVisible = true;
+	m_bVisible1 = false;
+}
+
+CMapCtrl::~CMapCtrl(void)
+{
+	m_pMapDisp = NULL;
+	m_left = 0;
+	m_top = 0;
+	m_iFlagTools = 0;
+	m_flagMove = false;
+}
+//初始化资源文件根目录
+bool CMapCtrl::Init( CMapEngine* pMapEngine, vchar* pRootPath, HWND hwnd , long left, long top )
+{
+	vchar strTemp[256] = {0};
+	strcat( strTemp, pRootPath );
+	strcat( strTemp, _T("config\\") );
+	m_pMapEngine = pMapEngine;
+	m_pMapDisp = &m_pMapEngine->m_MapDisp;
+	//删除按钮位置
+	string strDelImg = strTemp;
+	strDelImg += "del.png";
+	m_ImageDel.LoadImage( strDelImg.c_str() );
+
+//	strDelImg = strTemp;
+//	strDelImg += "1.bmp";
+//	m_ImageBk.LoadImage( strDelImg.c_str() );
+	//创建绘制图层
+	m_pMapLayer = &m_pMapDisp->m_MapLayerMan.m_ToolsLayer;
+	//初始化
+	m_MarkMapPoint.Init( m_pMapDisp, strTemp );
+	m_mapDirRule.Init( m_pMapDisp );
+	
+	string strFileNameRect = strTemp;
+
+	strFileNameRect = strTemp;
+	strFileNameRect += "maprect2.png";
+	m_MapToolRect.Init( m_pMapDisp, strFileNameRect, &m_ImageDel );
+
+	strFileNameRect = strTemp;
+	strFileNameRect += "maparound.png";
+	m_MapToolAround.Init( m_pMapDisp, strFileNameRect, &m_ImageDel );
+
+	m_MapToolLine.Init( m_pMapDisp, m_pMapLayer, &m_ImageDel );
+	m_MapToolPolygon.Init( m_pMapDisp,m_pMapLayer, &m_ImageDel );
+
+	m_left = left;
+	m_top = top;
+	m_btnLeft.Create( BTN_MAP_LEFT,strTemp,_T("left.png"),_T("left1.png"),left+10,top+30,this );
+	m_btnRight.Create( BTN_MAP_RIGHT,strTemp,_T("right.png"),_T("right1.png"),left+50,top+30,this );
+	m_btnUp.Create( BTN_MAP_UP,strTemp,_T("up.png"),_T("up1.png"),left+30,top+10,this );
+	m_btnDown.Create( BTN_MAP_DOWN,strTemp,_T("down.png"),_T("down1.png"),left+30,top+50,this );
+	m_btnZoomIn.Create( BTN_MAP_ZOOMIN,strTemp,_T("add.png"),_T("add1.png"),left+30,top+70,this );
+	m_btnZoomOut.Create( BTN_MAP_ZOOMOUT,strTemp,_T("sub.png"),_T("sub1.png"),left+30,1,this );
+	m_btnZoomBk.Create( BTN_MAP_SLIDE,strTemp,_T("pole.png"),_T("pole1.png"),_T("slider.png"),left+37,top+90,this );
+	m_pRectBk = m_btnZoomBk.GetBoundsRect();
+	m_interval = m_pRectBk->Height()/(m_maxLevel-m_minLevel);	
+
+	/*
+	m_btnRule.Init( hwnd,strTemp,_T("rule.png"),_T("rule1.png"),m_pRectBk->right-150,10 );
+	m_btnLine.Init( hwnd,strTemp,_T("line.png"),_T("line1.png"),m_pRectBk->right-90,10 );
+	m_btnPolygon.Init( hwnd,strTemp,_T("polygon.png"),_T("polygon1.png"),m_pRectBk->right-32,10 );
+	m_btnRule.ReSetPos( m_rcWnd.right - 200,10 );
+	m_btnLine.ReSetPos( m_rcWnd.right - 140,10 );
+	m_btnPolygon.ReSetPos( m_rcWnd.right - 82,10 );
+	*/
+	m_btnRule.Create( BTN_MAP_RULE,strTemp,_T("rule.png"),_T("rule1.png"),m_pRectBk->right-122,0,this );
+//	m_btnMapRect.Create( BTN_MAP_RECT,strTemp,_T("maprect.png"),_T("maprect1.png"),m_pRectBk->right,0,this );
+//	m_btnLine.Create( BTN_MAP_LINE,strTemp,_T("line.png"),_T("line1.png"),m_pRectBk->right-140,0,this );
+//	m_btnPolygon.Create( BTN_MAP_PLOY,strTemp,_T("polygon.png"),_T("polygon1.png"),m_pRectBk->right-82,0,this );
+//	m_btnSymbol.Init( hwnd,strTemp,_T("symbol.png"),_T("symbol1.png"),m_pRectBk->right-20,0 );
+	m_btnClean.Create( BTN_MAP_CLEAN,strTemp,_T("clean.png"),_T("clean1.png"),m_pRectBk->right-58,0,this  );
+//	m_btnMapSat.Create( BTN_MAP_SAT,strTemp,_T("map.png"),_T("satellite.png"),m_pRectBk->right-200,100,this  );
+	//
+//	m_MapSymbolEdit.Create(100,100,200,500,m_pMapEngine->m_hwnd);
+//	m_MapSymbolEdit.SetVisible( false );
+
+	m_level = m_pMapDisp->GetMapLevel();
+	m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+#ifdef GMAP_VIEW_QQ	//加载名称
+	m_urlDemo.SetText( GMAP_VIEW_QQ );
+	m_urlDemo.SetUrl( GMAP_VIEW_URL );
+	m_urlDemo.SetColor( 255 );
+#endif
+#ifdef GMAP_VIEW_URL
+	m_urlCopyRight.SetText( GMAP_VIEW_URL );
+	m_urlCopyRight.SetUrl( GMAP_VIEW_URL );
+	//m_btnCopyRight.Create( 0,strTemp,_T("tempo.png"),_T("tempo.png"),m_pRectBk->right-200,100,this);
+#endif	
+	
+	return 1;
+}
+//设置CtrlButton基准位置 
+void CMapCtrl::SetBasePos( long left, long top )
+{
+	m_left = left;
+	m_top = top;
+	m_btnLeft.ReSetPos( left+11,top+40 );
+	m_btnRight.ReSetPos( left+53,top+40 );
+	m_btnUp.ReSetPos( left+32,top+25 );
+	m_btnDown.ReSetPos( left+32,top+53 );
+//	m_btnCenter.ReSetPos( left+31,top+40 );
+	m_btnZoomIn.ReSetPos( left+32,top+76 );
+	m_btnZoomBk.ReSetPos( left+40,top+97 );
+	m_pRectBk = m_btnZoomBk.GetBoundsRect();
+	m_btnZoomOut.ReSetPos( left+32,m_pRectBk->bottom-1 );
+	m_level = m_pMapDisp->GetMapLevel();
+	m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+//	m_btnZoomMove.ReSetPos( m_pRectBk->left-9,top+100 );
+
+
+	m_btnRule.ReSetPos( m_rcWnd.right - 118,0 );//- 118
+//	m_btnMapRect.ReSetPos( m_rcWnd.right,0 );
+//	m_btnLine.ReSetPos( m_rcWnd.right - 140 ,0 );
+//	m_btnPolygon.ReSetPos( m_rcWnd.right - 82,0 );
+//	m_btnSymbol.ReSetPos( m_rcWnd.right - 180-58,0 );
+	m_btnClean.ReSetPos( m_rcWnd.right -58,0 );//-58
+//	m_btnMapSat.ReSetPos( m_rcWnd.right-50,40  );
+
+#ifdef HAN
+	m_btnMapRect.Init( m_rcWnd.right,0 );
+	m_btnRule.ReSetPos( m_rcWnd.right - 60-174,0 );
+	m_btnLine.ReSetPos( m_rcWnd.right - 174,0 ) 
+	m_btnPolygon.ReSetPos( m_rcWnd.right - 116,0 );
+#endif
+	//修改位置
+//	m_MapSymbolEdit.SetPos(m_rcWnd.right-300,100);
+	//
+	//URL位置
+#ifdef GMAP_VIEW_QQ
+	m_urlDemo.setPos( 85, 100 );
+#endif
+#ifdef GMAP_VIEW_URL
+	m_urlCopyRight.setPos( m_rcWnd.right -187, m_rcWnd.bottom - 23 );//- 120
+	//m_btnCopyRight.ReSetPos( m_rcWnd.right , m_rcWnd.bottom - 64 );//- 167
+#endif
+}
+//设置rc
+void CMapCtrl::SetMapRect( VOSRect& rcWnd )
+{
+	this->m_rcWnd = rcWnd;
+	this->SetBasePos( 10, 20 );
+}
+void CMapCtrl::SetVisible( bool bVisible )
+{
+	m_btnLeft.SetVisible( bVisible );
+	m_btnRight.SetVisible( bVisible );
+	m_btnUp.SetVisible( bVisible );
+	m_btnDown.SetVisible( bVisible );
+	m_btnZoomIn.SetVisible( bVisible );
+	m_btnZoomOut.SetVisible( bVisible );
+	m_btnZoomBk.SetVisible( bVisible );
+}
+void CMapCtrl::SetVisible1( bool bVisible )
+{
+	m_btnRule.SetVisible( bVisible );
+	m_btnClean.SetVisible( bVisible );
+}
+//绘制
+void CMapCtrl::OnDraw( HDC hdc,agg::rendering_buffer* rbuf  )
+{
+/*
+	string strLimit = "试用版_"+CUserInfo::GetLimitedDate();
+	char ctemp[10]={0};
+	sprintf(ctemp," level=%d",m_pMapDisp->GetMapLevel());
+	strLimit+=ctemp;
+	m_urlDemo.SetText( strLimit );
+	*/
+	m_btnLeft.OnDraw( hdc );
+	m_btnRight.OnDraw( hdc );
+	m_btnUp.OnDraw( hdc );
+
+	m_btnDown.OnDraw( hdc );
+//	m_btnCenter.OnDraw( hdc );
+	m_btnZoomIn.OnDraw( hdc );
+	m_btnZoomOut.OnDraw( hdc );
+
+	//long height = ( m_maxLevel - m_level )* m_interval+5;
+	//m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+	m_btnZoomBk.OnDraw(hdc);
+//	m_btnZoomMove.ReSetPos( m_pRectBk->left-8,m_btnZoomBk.GetPos() );
+//	m_btnZoomMove.OnDraw( hdc );
+	m_MarkMapPoint.OnDraw( hdc );
+	m_MapToolRect.OnDraw( hdc );
+	m_MapToolLine.OnDraw( hdc );
+	m_MapToolPolygon.OnDraw( hdc );
+	if( m_iFlagTools == 0 )
+	{
+		m_mapDirRule.OnDraw(hdc);
+	}
+	else if( m_iFlagTools == 1 )
+	{
+		m_mapDirRule.OnDraw(hdc);
+	}
+	else if( m_iFlagTools == 2 )
+	{
+		
+	}
+	else if( m_iFlagTools == 3 )
+	{
+		
+	}
+	else if( m_iFlagTools == 4 )
+	{
+		
+	}
+	else if( m_iFlagTools == 5 )
+	{
+	//	m_ImageMark.AlphaDraw(hdc,0,0,m_rcWnd.right,m_rcWnd.bottom,180 );
+		m_MapToolAround.OnDraw( hdc,rbuf );
+	}
+	CMapWnd::OnDraw(hdc);
+//	m_ImageBk.Draw(hdc,0,0);
+}
+//鼠标消息
+bool CMapCtrl::OnLButtonDown( VOSPoint point )
+{
+	if( CMapWnd::OnLButtonDown( point ) )
+	{
+		return true;
+	}
+	if( m_MarkMapPoint.OnLButtonDown( point ) )
+		return true;
+	if( m_MapToolLine.OnLButtonDown( point ) )
+		return true;
+	if( m_MapToolPolygon.OnLButtonDown( point ) )
+		return true;
+	if( m_MapToolAround.OnLButtonDown( point ) )
+		return true;
+	if( m_MapToolRect.OnLButtonDown( point ) )
+		return true;
+	if( m_iFlagTools == 1 )
+	{
+		m_mapDirRule.OnLButtonDown( point );
+	}
+	return false;
+}
+bool CMapCtrl::OnLButtonUp( VOSPoint point)
+{
+	if( CMapWnd::OnLButtonUp( point ) )
+	{
+		return true;
+	}
+	if( m_MarkMapPoint.OnLButtonUp( point ) )
+		return true;
+	if( m_MapToolLine.OnLButtonUp( point ) )
+		return true;
+	if( m_MapToolPolygon.OnLButtonUp( point ) )
+		return true;
+	if( m_MapToolAround.OnLButtonUp( point ) )
+		return true;
+	if( m_MapToolRect.OnLButtonUp( point ) )
+		return true;
+	//检测是否注册，注册的用户不现实版本信息
+	#ifdef GMAP_VIEW_URL
+		m_urlCopyRight.OpenURL();	
+	#endif
+	return false;
+}
+bool CMapCtrl::OnMouseMove( VOSPoint point)
+{
+#ifdef GMAP_VIEW_QQ
+	if ( this->m_urlDemo.IsPointIn( point ) )
+	{
+		return true;
+	}
+#endif
+#ifdef GMAP_VIEW_URL
+	if ( this->m_urlCopyRight.IsPointIn( point ) )
+	{
+		return true;
+	}
+#endif
+	if( m_pLastCtrol == &m_btnZoomBk )
+	{
+		m_btnZoomBk.OnMouseMove( point );
+	}
+	if( CMapWnd::OnMouseMove( point ) )
+	{
+		return true;
+	}
+	if( m_MarkMapPoint.OnMouseMove( point ) )
+		return true;
+	if( m_MapToolLine.OnMouseMove( point ) )
+		return true;
+	if( m_MapToolPolygon.OnMouseMove( point ) )
+		return true;
+	if( m_MapToolAround.OnMouseMove( point ) )
+		return true;
+	if( m_MapToolRect.OnMouseMove( point ) )
+		return true;
+	if( m_iFlagTools == 1 )
+	{
+		m_mapDirRule.SetMousePoint( point );
+	}
+	return false;
+}
+bool CMapCtrl::OnLButtonDblClk( VOSPoint point )
+{
+	if( CMapWnd::OnLButtonDblClk( point ) )
+	{
+		return true;
+	}
+	if( m_MarkMapPoint.OnLButtonDblClk( point ) )
+		return true;
+	if( m_MapToolLine.OnLButtonDblClk( point ) )
+		return true;
+	if( m_MapToolPolygon.OnLButtonDblClk(point) )
+		return true;
+	return false;
+}
+bool CMapCtrl::OnMouseWheel( short zDelta, VOSPoint point)
+{
+	m_level = m_pMapDisp->GetMapLevel();
+	m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+	return false;
+}
+void CMapCtrl::CheckAndSetMapLevel( VOSPoint point )
+{
+	if ( !m_flagMove )
+	{
+		return;
+	}
+	long height = point.y - m_pRectBk->top;
+	long level = m_maxLevel-m_minLevel - height / m_interval;
+	if( level > this->m_maxLevel )
+		level = m_maxLevel;
+	if( level < this->m_minLevel )
+		level = m_minLevel;
+	if ( m_level != level )
+	{
+		m_pMapDisp->SetMapLevel( level );
+		m_level = m_pMapDisp->GetMapLevel();
+		m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+	}		
+}
+void CMapCtrl::OnMoveOut()
+{
+	m_flagMove = false;
+}
+
+//设置地图工具，地图工具 1为方向测距 2为
+bool CMapCtrl::SetMapTools(long MapToolType)
+{
+	switch( MapToolType )
+	{
+	case 0:
+		ClearMapTools();
+		m_iFlagTools = 0;
+		break;
+	case 1:
+		if( m_iFlagTools == 1 )
+		{
+			ClearMapTools();
+		}
+		else
+		{
+			ClearMapTools();
+			m_mapDirRule.OnStart();
+			m_iFlagTools = 1;
+		}
+		break;
+	case 2:
+		ClearMapTools();
+		m_iFlagTools = 2;
+		m_MapToolLine.SetActive( true );
+		break;
+	case 3:
+		ClearMapTools();
+		m_iFlagTools = 3;
+		m_MapToolPolygon.SetActive( true );
+		m_MapToolPolygon.Create();
+		break;
+	case 4:
+		ClearMapTools();
+		m_MapToolRect.OnStop();
+		m_MapToolRect.OnStart();
+		m_iFlagTools = 4;
+		m_pMapDisp->Invalidate();
+		break;
+	case 5:
+		ClearMapTools();
+		m_MapToolAround.OnStop();
+		m_MapToolAround.OnStart();
+		m_iFlagTools = 5;
+		break;
+	case 6:
+		m_MarkMapPoint.SetMark();
+		break;
+	case 7:
+		if( m_iFlagTools == 4 )
+		{
+			ClearMapTools();
+		}
+		else
+		{
+			ClearMapTools();
+			m_MapToolRect.OnStart();
+			m_iFlagTools = 4;
+		}
+		break;
+	default:
+		ClearMapTools();
+	}	
+	//Invalidate();
+	return false;
+}
+//清楚地图工具以及所操作的地图
+void CMapCtrl::ClearMapTools()
+{
+	m_MarkMapPoint.SetMark( false );
+	m_MapToolLine.SetActive( false );
+	m_mapDirRule.OnStop();
+	m_MapToolRect.OnStop();
+	m_MapToolAround.OnStop();
+	m_MapToolPolygon.Clean();
+	m_MapToolLine.Clean();	
+	m_iFlagTools = 0;
+	Invalidate();
+}
+//是否显示
+void CMapCtrl::SetMapToolsBar( bool bShow )
+{
+//	m_bShowMapToolsBar = bShow;
+}
+//设置比例尺
+void CMapCtrl::SetMapScaleBound(long minscale, long maxscale)
+{
+	this->m_maxLevel = maxscale;
+	this->m_minLevel = minscale;
+}
+
+//地图缩放功能
+void CMapCtrl::OnMapZoom( )
+{
+	m_level = m_pMapDisp->GetMapLevel();
+	m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+}
+//命令
+void CMapCtrl::OnCommand( int id, int param1,int param2 )
+{
+	switch( id )
+	{
+	case BTN_MAP_LEFT:
+		m_pMapDisp->OnMapMove( 50,0 );
+		break;
+	case BTN_MAP_UP:
+		m_pMapDisp->OnMapMove( 0,50 );
+		break;
+	case BTN_MAP_RIGHT:
+		m_pMapDisp->OnMapMove( -50,0 );
+		break;
+	case BTN_MAP_DOWN:
+		m_pMapDisp->OnMapMove( 0,-50 );
+		break;
+	case BTN_MAP_ZOOMIN:
+		if( m_level < this->m_maxLevel )
+		{
+			m_pMapDisp->MapZoomIn( );
+			m_level = m_pMapDisp->GetMapLevel();
+			m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+		}
+		break;
+	case BTN_MAP_ZOOMOUT:
+		if( m_level > this->m_minLevel )
+		{
+			m_pMapDisp->MapZoomOut( );
+			m_level = m_pMapDisp->GetMapLevel();
+			m_btnZoomBk.SetSlidePos( m_maxLevel - m_minLevel - (m_level - m_minLevel ), m_maxLevel - m_minLevel );
+		}
+		break;
+	case BTN_MAP_SLIDE:
+		//m_btnZoomBk.OnLButtonUp( point );
+		m_level = m_btnZoomBk.GetSolidePos( m_maxLevel - m_minLevel ) + m_minLevel;
+		m_pMapDisp->SetMapLevel( m_level );
+		m_level = m_pMapDisp->GetMapLevel();
+		break;
+	case BTN_MAP_RULE:
+		this->SetMapTools( 1 );
+		break;
+	case BTN_MAP_RECT:
+		this->SetMapTools( 4 );
+		break;
+	case BTN_MAP_LINE:
+		this->SetMapTools( 2 );
+		break;
+	case BTN_MAP_PLOY:
+		this->SetMapTools( 3 );
+		break;
+	case BTN_MAP_CLEAN:
+		this->SetMapTools( 0 );
+		break;
+/*	case BTN_MAP_SAT:
+		//this->SetMapTools( 5 );
+		if( m_bMapSat )
+		{
+			m_pMapEngine->SetMapRes( 0 );
+			m_bMapSat = false;
+		}
+		else
+		{
+			m_pMapEngine->SetMapRes( 4 );
+			m_bMapSat = true;
+		}
+		break;
+*/
+	default:
+		;
+	}
+}
+//保存工具
+void CMapCtrl::SaveMap()
+{
+	m_MapToolLine.Save();
+}
+/*
+#define BTN_MAP_RULE		0x00000107
+#define BTN_MAP_RECT		0x00000108
+#define BTN_MAP_LINE		0x00000109
+#define BTN_MAP_PLOY		0x0000010A
+#define BTN_MAP_CLEAN		0x0000010B
+#define BTN_MAP_SAT			0x0000010C*/

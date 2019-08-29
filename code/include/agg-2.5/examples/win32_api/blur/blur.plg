@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: blur - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP572.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "../../../include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/blur.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_arc.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_arrowhead.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_bezier_arc.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\ctrl\agg_cbox_ctrl.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_curves.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_gsv_text.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\platform\win32\agg_platform_support.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\ctrl\agg_polygon_ctrl.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\ctrl\agg_rbox_ctrl.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\ctrl\agg_slider_ctrl.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_trans_affine.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_vcgen_contour.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_vcgen_stroke.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\platform\win32\agg_win32_bmp.cpp"
+"E:\work\gmap\trunk\gmap\include\agg-2.5\examples\blur.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP572.tmp" 
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP573.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/blur.pdb" /debug /machine:I386 /out:"Debug/blur.exe" /pdbtype:sept 
+".\Debug\agg_arc.obj"
+".\Debug\agg_arrowhead.obj"
+".\Debug\agg_bezier_arc.obj"
+".\Debug\agg_cbox_ctrl.obj"
+".\Debug\agg_curves.obj"
+".\Debug\agg_gsv_text.obj"
+".\Debug\agg_platform_support.obj"
+".\Debug\agg_polygon_ctrl.obj"
+".\Debug\agg_rbox_ctrl.obj"
+".\Debug\agg_slider_ctrl.obj"
+".\Debug\agg_trans_affine.obj"
+".\Debug\agg_vcgen_contour.obj"
+".\Debug\agg_vcgen_stroke.obj"
+".\Debug\agg_win32_bmp.obj"
+".\Debug\blur.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP573.tmp"
+<h3>Output Window</h3>
+Compiling...
+agg_arc.cpp
+agg_arrowhead.cpp
+agg_bezier_arc.cpp
+agg_cbox_ctrl.cpp
+agg_curves.cpp
+agg_gsv_text.cpp
+agg_platform_support.cpp
+agg_polygon_ctrl.cpp
+agg_rbox_ctrl.cpp
+agg_slider_ctrl.cpp
+agg_trans_affine.cpp
+agg_vcgen_contour.cpp
+agg_vcgen_stroke.cpp
+agg_win32_bmp.cpp
+blur.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+blur.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

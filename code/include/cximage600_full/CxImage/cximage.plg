@@ -1,0 +1,164 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CxImage - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5E34.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\jpeg" /I "..\png" /I "..\zlib" /I "..\mng" /I "..\tiff" /I "..\j2k" /I "..\jasper\include" /D "WIN32" /D "_DEBUG" /D "_LIB" /D "JAS_WIN_MSVC_BUILD" /D "_CRT_SECURE_NO_DEPRECATE" /Fr"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\tif_xfile.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximabmp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximadsp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximaenc.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximaexif.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximage.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximagif.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximahist.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximaico.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximainfo.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximaint.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximajas.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximajbg.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximajpg.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximalpha.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximalyr.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximamng.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximapal.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximapcx.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximapng.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximaraw.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximasel.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximaska.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximatga.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximath.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximatif.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximatran.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximawbmp.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximawmf.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\ximawnd.cpp"
+"E:\work\gmapx\trunk\gmap2\include\cximage600_full\CxImage\xmemfile.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5E34.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5E35.tmp" with contents
+[
+/nologo /out:"..\..\..\lib\cximage.lib" 
+.\Debug\tif_xfile.obj
+.\Debug\ximabmp.obj
+.\Debug\ximadsp.obj
+.\Debug\ximaenc.obj
+.\Debug\ximaexif.obj
+.\Debug\xImage.obj
+.\Debug\ximagif.obj
+.\Debug\ximahist.obj
+.\Debug\ximaico.obj
+.\Debug\ximainfo.obj
+.\Debug\ximaint.obj
+.\Debug\ximajas.obj
+.\Debug\ximajbg.obj
+.\Debug\ximajpg.obj
+.\Debug\ximalpha.obj
+.\Debug\ximalyr.obj
+.\Debug\ximamng.obj
+.\Debug\ximapal.obj
+.\Debug\ximapcx.obj
+.\Debug\ximapng.obj
+.\Debug\ximaraw.obj
+.\Debug\ximasel.obj
+.\Debug\ximaska.obj
+.\Debug\ximatga.obj
+.\Debug\ximath.obj
+.\Debug\ximatif.obj
+.\Debug\ximatran.obj
+.\Debug\ximawbmp.obj
+.\Debug\ximawmf.obj
+.\Debug\ximawnd.obj
+.\Debug\xmemfile.obj
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5E35.tmp"
+<h3>Output Window</h3>
+Compiling...
+tif_xfile.cpp
+ximabmp.cpp
+ximadsp.cpp
+ximaenc.cpp
+ximaexif.cpp
+ximage.cpp
+ximagif.cpp
+ximahist.cpp
+ximaico.cpp
+ximainfo.cpp
+ximaint.cpp
+ximajas.cpp
+ximajbg.cpp
+Generating Code...
+Compiling...
+ximajpg.cpp
+ximalpha.cpp
+ximalyr.cpp
+ximamng.cpp
+ximapal.cpp
+ximapcx.cpp
+ximapng.cpp
+ximaraw.cpp
+ximasel.cpp
+ximaska.cpp
+ximatga.cpp
+ximath.cpp
+ximatif.cpp
+Generating Code...
+Compiling...
+ximatran.cpp
+ximawbmp.cpp
+ximawmf.cpp
+ximawnd.cpp
+xmemfile.cpp
+Generating Code...
+Creating library...
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP93B7.tmp" with contents
+[
+/nologo /o"Debug/cximage.bsc" 
+.\Debug\tif_xfile.sbr
+.\Debug\ximabmp.sbr
+.\Debug\ximadsp.sbr
+.\Debug\ximaenc.sbr
+.\Debug\ximaexif.sbr
+.\Debug\xImage.sbr
+.\Debug\ximagif.sbr
+.\Debug\ximahist.sbr
+.\Debug\ximaico.sbr
+.\Debug\ximainfo.sbr
+.\Debug\ximaint.sbr
+.\Debug\ximajas.sbr
+.\Debug\ximajbg.sbr
+.\Debug\ximajpg.sbr
+.\Debug\ximalpha.sbr
+.\Debug\ximalyr.sbr
+.\Debug\ximamng.sbr
+.\Debug\ximapal.sbr
+.\Debug\ximapcx.sbr
+.\Debug\ximapng.sbr
+.\Debug\ximaraw.sbr
+.\Debug\ximasel.sbr
+.\Debug\ximaska.sbr
+.\Debug\ximatga.sbr
+.\Debug\ximath.sbr
+.\Debug\ximatif.sbr
+.\Debug\ximatran.sbr
+.\Debug\ximawbmp.sbr
+.\Debug\ximawmf.sbr
+.\Debug\ximawnd.sbr
+.\Debug\xmemfile.sbr]
+Creating command line "bscmake.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP93B7.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+cximage.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

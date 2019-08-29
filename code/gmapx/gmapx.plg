@@ -1,0 +1,109 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: gmapx - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9633.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/gmapx.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmapx1\gmapx\code\MapEngine\MapEngine.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP9633.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9634.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/gmapx.pdb" /debug /machine:I386 /def:".\gmapx.def" /out:"../bin/gmapx.ocx" /implib:"Debug/gmapx.lib" /pdbtype:sept 
+.\Debug\DlgMapSymbol.obj
+.\Debug\DlgProperty.obj
+.\Debug\gmapx.obj
+.\Debug\GmapxCtl.obj
+.\Debug\GmapxPpg.obj
+.\Debug\InputBox.obj
+.\Debug\StdAfx.obj
+.\Debug\agg_vcgen_contour.obj
+.\Debug\agg_vcgen_markers_term.obj
+.\Debug\agg_vcgen_stroke.obj
+.\Debug\bspng.obj
+.\Debug\MD5.obj
+.\Debug\PngImage.obj
+.\Debug\Project.obj
+.\Debug\VOSFile.obj
+.\Debug\VOSImage.obj
+.\Debug\VosTime.obj
+.\Debug\VOSURL.obj
+.\Debug\VOSUtil.obj
+.\Debug\MapBlockUnit.obj
+.\Debug\MapData.obj
+.\Debug\MapDataDown.obj
+.\Debug\MapDisp.obj
+.\Debug\MapDispLayer.obj
+.\Debug\FourTree.obj
+.\Debug\MapBase.obj
+.\Debug\MapFourTree.obj
+.\Debug\MapUtil.obj
+.\Debug\SqliteDB.obj
+.\Debug\BackLayer.obj
+.\Debug\MapAround.obj
+.\Debug\MapLayer.obj
+.\Debug\MapLeyerMan.obj
+.\Debug\MapLine.obj
+.\Debug\MapPoi.obj
+.\Debug\MapPoiInfo.obj
+.\Debug\MapPoint.obj
+.\Debug\MapPoiRes.obj
+.\Debug\MapPolygon.obj
+.\Debug\MapRule.obj
+.\Debug\MapText.obj
+.\Debug\MapButton.obj
+.\Debug\MapComBox.obj
+.\Debug\MapCtrl.obj
+.\Debug\MapCtrol.obj
+.\Debug\MapDirRule.obj
+.\Debug\MapEdit.obj
+.\Debug\MapSymbolEdit.obj
+.\Debug\MapToolAround.obj
+.\Debug\MapToolLine.obj
+.\Debug\MapToolPolygon.obj
+.\Debug\MapToolRect.obj
+.\Debug\MapWnd.obj
+.\Debug\MarkMapPoint.obj
+.\Debug\SlideButton.obj
+.\Debug\UrlLink.obj
+.\Debug\MapOffSet.obj
+.\Debug\MapField.obj
+.\Debug\MapFields.obj
+.\Debug\MapParts.obj
+.\Debug\MapPoints.obj
+.\Debug\MapRecordSet.obj
+.\Debug\MapRectangle.obj
+.\Debug\MapTableDesc.obj
+.\Debug\MifMan.obj
+.\Debug\shpFile.obj
+.\Debug\MapEngine.obj
+.\Debug\gmapx.res
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP9634.tmp"
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9635.bat" with contents
+[
+@echo off
+regsvr32 /s /c "\work\gmapx1\gmapx\code\bin\gmapx.ocx"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9635.bat"
+Compiling...
+MapEngine.cpp
+E:\work\gmapx1\gmapx\code\MapEngine\MapEngine.cpp(210) : warning C4800: 'long' : forcing value to bool 'true' or 'false' (performance warning)
+Linking...
+   Creating library Debug/gmapx.lib and object Debug/gmapx.exp
+<h3>Output Window</h3>
+Registering ActiveX Control...
+
+
+
+<h3>Results</h3>
+gmapx.ocx - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

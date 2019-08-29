@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: alpha_mask3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP569.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "../../../include" /I "../../../gpc" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /FR"Debug/" /Fp"Debug/alpha_mask3.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\gmap\trunk\gmap\include\agg-2.5\src\agg_vcgen_stroke.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP569.tmp" 
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP56A.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/alpha_mask3.pdb" /debug /machine:I386 /out:"Debug/alpha_mask3.exe" /pdbtype:sept 
+".\Debug\agg_bezier_arc.obj"
+".\Debug\agg_cbox_ctrl.obj"
+".\Debug\agg_curves.obj"
+".\Debug\agg_gsv_text.obj"
+".\Debug\agg_platform_support.obj"
+".\Debug\agg_rbox_ctrl.obj"
+".\Debug\agg_slider_ctrl.obj"
+".\Debug\agg_trans_affine.obj"
+".\Debug\agg_vcgen_stroke.obj"
+".\Debug\agg_win32_bmp.obj"
+".\Debug\alpha_mask3.obj"
+".\Debug\make_arrows.obj"
+".\Debug\make_gb_poly.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP56A.tmp"
+<h3>Output Window</h3>
+Compiling...
+agg_vcgen_stroke.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP56B.tmp" with contents
+[
+/nologo /o"Debug/alpha_mask3.bsc" 
+".\Debug\agg_bezier_arc.sbr"
+".\Debug\agg_cbox_ctrl.sbr"
+".\Debug\agg_curves.sbr"
+".\Debug\agg_gsv_text.sbr"
+".\Debug\agg_platform_support.sbr"
+".\Debug\agg_rbox_ctrl.sbr"
+".\Debug\agg_slider_ctrl.sbr"
+".\Debug\agg_trans_affine.sbr"
+".\Debug\agg_vcgen_stroke.sbr"
+".\Debug\agg_win32_bmp.sbr"
+".\Debug\alpha_mask3.sbr"
+".\Debug\make_arrows.sbr"
+".\Debug\make_gb_poly.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\XIEXIA~1\LOCALS~1\Temp\RSP56B.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+alpha_mask3.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
